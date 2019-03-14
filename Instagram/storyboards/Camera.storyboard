@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yuy-bg-C38">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera-->
+        <scene sceneID="qSK-lg-fnN">
+            <objects>
+                <viewController id="ge8-lz-pxb" customClass="CameraViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r9A-rR-M7D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgk-OA-eeh">
+                                <rect key="frame" x="0.0" y="113" width="375" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="APL-me-ROS">
+                                        <rect key="frame" x="0.0" y="-49" width="375" height="606"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h47-qJ-Yeu">
+                                        <rect key="frame" x="96" y="10" width="271" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upload_image" translatesAutoresizingMaskIntoConstraints="NO" id="z1k-UA-fCP">
+                                        <rect key="frame" x="8" y="10" width="80" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="NgQ-HY-i7z"/>
+                                            <constraint firstAttribute="height" constant="85" id="Pa0-IX-tP0"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="z1k-UA-fCP" firstAttribute="top" secondItem="bgk-OA-eeh" secondAttribute="top" constant="10" id="7Ks-mo-TEf"/>
+                                    <constraint firstAttribute="bottom" secondItem="z1k-UA-fCP" secondAttribute="bottom" constant="10" id="8Tx-GP-roG"/>
+                                    <constraint firstAttribute="height" constant="100" id="95X-Qp-jxc"/>
+                                    <constraint firstItem="h47-qJ-Yeu" firstAttribute="top" secondItem="bgk-OA-eeh" secondAttribute="top" constant="10" id="996-jb-85z"/>
+                                    <constraint firstAttribute="trailing" secondItem="h47-qJ-Yeu" secondAttribute="trailing" constant="8" id="C6B-Ie-0gz"/>
+                                    <constraint firstItem="h47-qJ-Yeu" firstAttribute="leading" secondItem="z1k-UA-fCP" secondAttribute="trailing" constant="8" id="TBE-WG-7BO"/>
+                                    <constraint firstAttribute="bottom" secondItem="h47-qJ-Yeu" secondAttribute="bottom" constant="10" id="tBO-Ph-cbB"/>
+                                    <constraint firstItem="z1k-UA-fCP" firstAttribute="leading" secondItem="bgk-OA-eeh" secondAttribute="leading" constant="8" id="x0K-mq-GMg"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyk-sD-7Ym">
+                                <rect key="frame" x="8" y="609" width="359" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qB6-6T-O3g"/>
+                                </constraints>
+                                <state key="normal" title="POST">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="postButtonTapped:" destination="ge8-lz-pxb" eventType="touchUpInside" id="ewf-Fs-2cv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVr-sw-jTp">
+                                <rect key="frame" x="303" y="581" width="64" height="20"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="10K-M4-lkm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="CCl-pD-owD"/>
+                                    <constraint firstAttribute="width" constant="20" id="Sr8-Wj-P5z"/>
+                                    <constraint firstAttribute="height" constant="20" id="k8k-cI-h75"/>
+                                </constraints>
+                                <state key="normal" image="trash"/>
+                                <connections>
+                                    <action selector="clearData:" destination="ge8-lz-pxb" eventType="touchUpInside" id="Olm-IP-mJB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wyk-sD-7Ym" firstAttribute="top" secondItem="cVr-sw-jTp" secondAttribute="bottom" constant="8" id="Lev-UG-np6"/>
+                            <constraint firstItem="bgk-OA-eeh" firstAttribute="leading" secondItem="kUH-sb-Aey" secondAttribute="leading" id="MMz-rC-nl9"/>
+                            <constraint firstItem="wyk-sD-7Ym" firstAttribute="leading" secondItem="kUH-sb-Aey" secondAttribute="leading" constant="8" id="Zm3-Ha-wYS"/>
+                            <constraint firstItem="kUH-sb-Aey" firstAttribute="trailing" secondItem="wyk-sD-7Ym" secondAttribute="trailing" constant="8" id="jzS-YY-Jg5"/>
+                            <constraint firstItem="bgk-OA-eeh" firstAttribute="trailing" secondItem="kUH-sb-Aey" secondAttribute="trailing" id="mZ1-ZP-12k"/>
+                            <constraint firstItem="bgk-OA-eeh" firstAttribute="top" secondItem="kUH-sb-Aey" secondAttribute="top" id="o5V-0m-LN6"/>
+                            <constraint firstItem="wyk-sD-7Ym" firstAttribute="top" secondItem="cVr-sw-jTp" secondAttribute="bottom" constant="8" id="v8g-2B-i7Y"/>
+                            <constraint firstItem="kUH-sb-Aey" firstAttribute="bottom" secondItem="wyk-sD-7Ym" secondAttribute="bottom" constant="8" id="wFh-Mz-1fB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kUH-sb-Aey"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Camera" id="l6b-7j-83a"/>
+                    <connections>
+                        <outlet property="captionTextView" destination="h47-qJ-Yeu" id="bTE-PQ-4WD"/>
+                        <outlet property="photo" destination="z1k-UA-fCP" id="p7P-W8-4Ko"/>
+                        <outlet property="postButton" destination="wyk-sD-7Ym" id="vFl-hs-A3t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ACo-fN-MNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1271.2" y="133.5832083958021"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="3tU-4P-HAf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yuy-bg-C38" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Camera" image="Photo" selectedImage="Photo" id="FMs-he-GI6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o7k-gx-71p">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ge8-lz-pxb" kind="relationship" relationship="rootViewController" id="B5j-9C-Ojh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="INF-R0-qPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1270" y="-640"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Photo" width="22" height="23"/>
+        <image name="appBackground" width="1000" height="1000"/>
+        <image name="trash" width="512" height="512"/>
+        <image name="upload_image" width="225" height="225"/>
+    </resources>
+</document>

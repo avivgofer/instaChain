@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b0J-on-T2d">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="q0h-zQ-Pr5">
+            <objects>
+                <viewController id="b0J-on-T2d" customClass="ViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c1P-8X-kO5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNy-yo-5De">
+                                <rect key="frame" x="8" y="196" width="359" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gFR-BQ-298">
+                                <rect key="frame" x="8" y="246" width="359" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiE-4K-vsO">
+                                <rect key="frame" x="8" y="296" width="359" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Sign in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInTapped:" destination="b0J-on-T2d" eventType="touchUpInside" id="1eP-Sj-XKo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfW-CD-Wtg">
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Switch to Sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bjs-KB-5SC" kind="presentation" id="Jol-CL-TMH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InstaChain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU6-pC-kXe">
+                                <rect key="frame" x="113" y="120" width="149" height="61"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hU6-pC-kXe" firstAttribute="top" secondItem="emS-aU-pCE" secondAttribute="top" constant="75" id="DF7-Ae-oS1"/>
+                            <constraint firstItem="emS-aU-pCE" firstAttribute="bottom" secondItem="WfW-CD-Wtg" secondAttribute="bottom" id="EvH-Sd-6nB"/>
+                            <constraint firstItem="hU6-pC-kXe" firstAttribute="centerX" secondItem="c1P-8X-kO5" secondAttribute="centerX" id="L6L-af-yVh"/>
+                            <constraint firstItem="emS-aU-pCE" firstAttribute="trailing" secondItem="WfW-CD-Wtg" secondAttribute="trailing" id="MNX-Zf-8WL"/>
+                            <constraint firstItem="WfW-CD-Wtg" firstAttribute="leading" secondItem="emS-aU-pCE" secondAttribute="leading" id="fzy-bw-g7Y"/>
+                            <constraint firstItem="hU6-pC-kXe" firstAttribute="top" secondItem="emS-aU-pCE" secondAttribute="top" constant="100" id="znj-6g-tPn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="emS-aU-pCE"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="pNy-yo-5De" id="vRv-KI-QXB"/>
+                        <outlet property="passwordTextField" destination="gFR-BQ-298" id="vUG-XF-wWM"/>
+                        <segue destination="Rz5-pi-dIO" kind="presentation" identifier="moveToProfile" id="p1v-do-zRz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZE-L0-YKU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263" y="105"/>
+        </scene>
+        <!--Signup view controller-->
+        <scene sceneID="aXb-y1-Z8z">
+            <objects>
+                <viewController title="Signup view controller" id="bjs-KB-5SC" customClass="SignUpViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hkg-mA-4cW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ax8-v0-tEJ">
+                                <rect key="frame" x="8" y="197" width="359" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MG1-K7-XB4">
+                                <rect key="frame" x="8" y="246" width="359" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xr-wQ-gz6">
+                                <rect key="frame" x="8" y="296" width="359" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signupTapped:" destination="bjs-KB-5SC" eventType="touchUpInside" id="3Mc-se-2wZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RqN-o0-fET">
+                                <rect key="frame" x="8" y="150" width="359" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msb-uo-w7W">
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Switch to Sign in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissOnClick:" destination="bjs-KB-5SC" eventType="touchUpInside" id="1IX-uf-yRV"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defualtProfile" translatesAutoresizingMaskIntoConstraints="NO" id="59Q-cE-fpP">
+                                <rect key="frame" x="147" y="42" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l30-8z-YaU" firstAttribute="bottom" secondItem="Msb-uo-w7W" secondAttribute="bottom" id="3Yi-Xg-fVe"/>
+                            <constraint firstItem="l30-8z-YaU" firstAttribute="trailing" secondItem="Msb-uo-w7W" secondAttribute="trailing" id="EPW-B7-BOL"/>
+                            <constraint firstItem="Msb-uo-w7W" firstAttribute="leading" secondItem="l30-8z-YaU" secondAttribute="leading" id="VfB-gn-jgB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l30-8z-YaU"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="ax8-v0-tEJ" id="wd3-3p-LAF"/>
+                        <outlet property="passwordTextField" destination="MG1-K7-XB4" id="DnU-LD-qgW"/>
+                        <outlet property="profileImage" destination="59Q-cE-fpP" id="2ll-ao-XtJ"/>
+                        <outlet property="usernameTextField" destination="RqN-o0-fET" id="CyL-hq-qJd"/>
+                        <segue destination="b0J-on-T2d" kind="presentation" identifier="backToSignIn" id="m59-jD-gu5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tx4-eA-BZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="891"/>
+        </scene>
+        <!--App-->
+        <scene sceneID="Vuv-Ls-61x">
+            <objects>
+                <viewControllerPlaceholder storyboardName="App" id="Rz5-pi-dIO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wvj-xu-G2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194" y="445"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="defualtProfile" width="512" height="512"/>
+    </resources>
+</document>
